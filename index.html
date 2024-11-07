@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Exo Module8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Pion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="out"></div>
+    <div class="container">
+        <header>
+            <h1>Jeu du Pion</h1>
+        </header>
+
+        <section class="game-settings">
+            <h2>Paramètres du jeu</h2>
+
+            <!-- Choisir la taille de la grille -->
+            <div class="setting">
+                <label for="gridSize">Taille de la grille (max 12) :</label>
+                <input type="number" id="gridSize" min="1" max="12" value="5">
+            </div>
+
+            <!-- Sélectionner la difficulté -->
+            <h3>Choisissez votre niveau de difficulté</h3>
+            <div class="difficulty-buttons">
+                <button id="easy">Facile</button>
+                <button id="medium">Moyen</button>
+                <button id="hard">Difficile</button>
+            </div>
+
+            <!-- Bouton pour démarrer -->
+            <button id="startGame">Jouer</button>
+        </section>
+
+        <!-- Zone d'affichage du jeu -->
+        <section id="gameArea">
+            <div id="out"></div>
+        </section>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
